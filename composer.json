@@ -1,0 +1,36 @@
+{
+  "name": "christattum/kirby-starter-vanilla",
+  "description": "Kirby Starter Vanilla",
+  "type": "project",
+  "keywords": [
+    "kirby",
+    "cms"
+  ],
+  "authors": [
+    {
+      "name": "Chris Tattum",
+      "email": "chris.tattum@gmail.com",
+      "homepage": "https://christattum.com"
+    }
+  ],
+  "homepage": "https://christattum.com",
+  "support": {
+    "email": "chris.tattum@gmail.com"
+  },
+  "require": {
+    "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+    "getkirby/cms": "^4.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    },
+    "optimize-autoloader": true
+  },
+  "scripts": {
+    "start": [
+      "Composer\\Config::disableProcessTimeout",
+      "@php -S localhost:8000 kirby/router.php"
+    ]
+  }
+}

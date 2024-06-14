@@ -59,6 +59,9 @@ AddOutputFilterByType DEFLATE application/x-javascript
 # set security headers in all responses
 <IfModule mod_headers.c>
 
+# Disable Siteground dynamic cache
+Header set Cache-Control "no-cache"
+
 # serve files as plain text if the actual content type is not known
 # (hardens against attacks from malicious file uploads)
 Header set Content-Type "text/plain" "expr=-z %{CONTENT_TYPE}"
